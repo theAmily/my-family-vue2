@@ -56,6 +56,18 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/users',
+    component: Layout,
+    children: [
+      {
+        path: 'user',
+        name: 'User',
+        component: () => import('@/views/users/index'),
+        meta: { title: '人员管理', icon: 'user' }
+      }
+    ]
+  },
 
   // {
   //   path: '/example',

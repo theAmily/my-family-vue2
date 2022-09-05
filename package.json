@@ -1,6 +1,6 @@
 {
-  "name": "vue-admin-template",
-  "version": "4.4.0",
+  "name": "my_family_2.0",
+  "version": "1.0.1",
   "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
   "author": "Pan <panfree23@gmail.com>",
   "scripts": {
@@ -58,5 +58,13 @@
     "node": ">=8.9",
     "npm": ">= 3.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/zhaoxiao-yan/my-family-vue2.git"
+  }
 }
