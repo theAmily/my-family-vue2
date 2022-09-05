@@ -1,30 +1,41 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <el-row class="base-consume">
+      <EchartsLine />
+    </el-row>
+
+    <el-row>
+      <el-col span="12">
+        <EchartsBar />
+      </el-col>
+      <el-col span="12">
+        1
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import EchartsBar from './components/echarts-bar.vue'
+import EchartsLine from './components/echarts-line.vue'
 
 export default {
   name: 'Dashboard',
-  computed: {
-    ...mapGetters([
-      'name'
-    ])
+  components: {
+    EchartsBar,
+    EchartsLine
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.dashboard {
-  &-container {
-    margin: 30px;
-  }
-  &-text {
-    font-size: 30px;
-    line-height: 46px;
+.dashboard-container {
+  height: 90vh;
+  .el-row{
+    height: 50%;
+    .el-col {
+      height: 100%;
+    }
   }
 }
 </style>
