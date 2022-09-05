@@ -1,5 +1,5 @@
 <template>
-  <div id="echarts-bar" />
+  <div id="echarts-pai" />
 </template>
 
 <script>
@@ -12,30 +12,21 @@ export default {
   },
   methods: {
     echartsInit() {
-      const myChart = echarts.init(document.getElementById('echarts-bar'))
+      const myChart = echarts.init(document.getElementById('echarts-pai'))
       // 绘制图表
       myChart.setOption({
         legend: {
           top: 'bottom'
         },
-        toolbox: {
-          show: true,
-          feature: {
-            mark: { show: true },
-            dataView: { show: true, readOnly: false },
-            restore: { show: true },
-            saveAsImage: { show: true }
-          }
-        },
         series: [
           {
             name: 'Nightingale Chart',
             type: 'pie',
-            radius: [50, 250],
+            radius: [20, 100],
             center: ['50%', '50%'],
             roseType: 'area',
             itemStyle: {
-              borderRadius: 8
+              borderRadius: 5
             },
             data: [
               { value: 40, name: 'rose 1' },
@@ -56,8 +47,9 @@ export default {
 </script>
 
 <style>
-#echarts-bar {
+#echarts-pai {
   width: 100%;
   height: 100%;
+  background-color: #fff;
 }
 </style>

@@ -27,11 +27,6 @@ export default {
           bottom: '3%',
           containLabel: true
         },
-        toolbox: {
-          feature: {
-            saveAsImage: {}
-          }
-        },
         xAxis: {
           type: 'category',
           boundaryGap: false,
@@ -81,6 +76,6 @@ export default {
 <style>
 #echarts-line {
   width: 100%;
-  height: 100%;
+  height: 83.5%;
 }
 </style>
